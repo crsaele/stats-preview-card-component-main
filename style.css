@@ -1,0 +1,176 @@
+/* FONT GOOGLE-FONTS IMPORT LINK */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
+:root {
+  /* PRIMARY COLORS */
+  --veryDarkBlue: hsl(233, 47%, 7%);
+  --darkDesaturatedBlue: hsl(244, 38%, 16%);
+  --softViolet: hsl(277, 64%, 61%);
+  --darkerViolet: #6b00b3;
+
+  /* NEUTRAL COLORS */
+  --white: hsl(0, 0%, 100%);
+  --slightlyTransparentWhite: hsla(0, 0%, 100%, 0.75);
+
+  /* FONTS */
+  --inter: "Inter", sans-serif;
+  --lexendDeca: "Lexend", sans-serif;
+}
+
+/* ELEMENTS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--veryDarkBlue);
+}
+
+h1 {
+  font-family: var(--inter);
+  margin: 20px 0;
+}
+
+h2 {
+  font-family: var(--lexendDeca);
+  margin: 5px 0;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+p {
+  font-family: var(--inter);
+  color: var(--slightlyTransparentWhite);
+  line-height: 1.6rem;
+  font-size: 15px;
+  padding-right: 50px;
+}
+
+span {
+  font-family: var(--lexendDeca);
+  color: var(--slightlyTransparentWhite);
+}
+
+picture {
+  mix-blend-mode: difference;
+  background-color: var(--darkerViolet);
+}
+
+picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+  border-radius: 0 5px 5px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* CLASSES */
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.marker {
+  color: var(--softViolet);
+}
+
+.card {
+  background-color: var(--darkDesaturatedBlue);
+  padding: 50px;
+  border-radius: 5px 0 0 5px;
+  width: 500px;
+  color: var(--white);
+}
+
+.card-stats {
+  display: flex;
+  font-family: var(--lexendDeca);
+  justify-content: space-between;
+  margin: 50px 0;
+  padding-right: 70px;
+  align-items: center;
+}
+
+.card-info {
+  font-size: 0.8rem;
+  font-family: var(--inter);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.attribution {
+  font-size: 1.2rem;
+  color: var(--white);
+  font-family: var(--inter);
+  position: absolute;
+  text-align: center;
+  bottom: 130px;
+}
+
+.attribution a {
+  color: var(--softViolet);
+}
+
+
+/* MOBILE */
+
+@media only screen and (max-width: 950px) {
+
+  h1 {
+    padding: 0 15px;
+  }
+
+  p {
+    padding: 0;
+  }
+
+  picture {
+    width: 400px;
+  }
+
+  img {
+    display: block;
+  }
+  
+
+  .flex-container {
+    flex-direction: column-reverse;
+  }
+
+  .card {
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .card-stats {
+    display: block;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .card-stats div {
+    margin: 30px 0;
+  }
+
+  .attribution {
+    display: none;
+  }
+
+
+
+}
